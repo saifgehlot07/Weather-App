@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <main>
+      <section class="leftbar">
+        <div class="menu-bars__menu-logo">
+          <h1 class="logo"><span>W</span>eather<span>f</span>orcast</h1>
+          <ul>
+            <li class="active">
+              <i class="uil uil-estate active"></i> Dashboard
+            </li>
+            <li><i class="uil uil-map"></i> Map</li>
+            <li><i class="uil uil-image"></i> Saved Location</li>
+            <li><i class="uil uil-calender"></i> Calender</li>
+          </ul>
+        </div>
+        <div class="menu__system">
+          <ul>
+            <li><i class="uil uil-setting"></i> Setting</li>
+            <li><i class="uil uil-signin"></i> Logout account</li>
+          </ul>
+        </div>
+      </section>
+      <section class="weatherdata">
+        <div class="top__navbar">
+          <div class="current__time">
+            <h1>Hi, SaifGehlot</h1>
+            <p>Thursday, Jan 4, 2023</p>
+          </div>
+          <div class="search__data">
+            <div class="search__input">
+              <i class="uil uil-search"></i>
+              <input
+                id="search"
+                type="text"
+                placeholder="Search Location Here"
+              />
+            </div>
+            <div class="bell__icon">
+              <i class="uil uil-bell"></i>
+            </div>
+            <div class="user__icon">
+              <i class="uil uil-user"></i>
+            </div>
+          </div>
+        </div>
+        <div class="mid__overview">
+          <div class="top__title">
+            <h2>Today Overview</h2>
+          </div>
+          <div class="data__lables">
+            <div class="data__lable">
+              <div class="text">
+                <p>Wind Speed</p>
+                <h1 id="wind-speed"></h1>
+              </div>
+            </div>
+            <div class="data__lable">
+              <div class="text">
+                <p>Humidity</p>
+                <h1 id="humidity"></h1>
+              </div>
+            </div>
+          </div>
+          <div class="data__lables">
+            <div class="data__lable">
+              <div class="text">
+                <p>Pressure</p>
+                <h1 id="pressure"></h1>
+              </div>
+            </div>
+            <div class="data__lable">
+              <div class="text">
+                <p>Feels Like</p>
+                <h1 id="feels-like"></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom__graph">
+          <h2>Average Weekly Temperature</h2>
+          <canvas id="weather__chart"></canvas>
+        </div>
+      </section>
+      <section class="locationdata">
+        <div class="location">
+          <div class="country__name">
+            <h1 id="city"></h1>
+          </div>
+          <div class="time">
+            <h2 id="current-time">08:34 AM</h2>
+          </div>
+        </div>
+        <div class="celcius__data">
+          <div class="celcius">
+            <h1 id="celcius"></h1>
+          </div>
+          <div class="weather__type">
+            <h2 id="weather-type"></h2>
+          </div>
+        </div>
+        <div class="rain__progress">
+          <h2>Chance of Rain</h2>
+          <div class="progress__data">
+            <p>7pm</p>
+            <div class="progress">
+              <div class="progress__bar"></div>
+            </div>
+            <p>44%</p>
+          </div>
+          <div class="progress__data">
+            <p>8pm</p>
+            <div class="progress">
+              <div class="progress__bar"></div>
+            </div>
+            <p>36%</p>
+          </div>
+          <div class="progress__data">
+            <p>9pm</p>
+            <div class="progress">
+              <div class="progress__bar"></div>
+            </div>
+            <p>55%</p>
+          </div>
+          <div class="progress__data">
+            <p>9pm</p>
+            <div class="progress">
+              <div class="progress__bar"></div>
+            </div>
+            <p>12%</p>
+          </div>
+        </div>
+        <div class="sun__data">
+          <div class="top__title">
+            <h2>Sunset & Sunrise</h2>
+          </div>
+          <div class="sunrise__data">
+            <div class="data__lable">
+              <div class="text">
+                <p>Sunrise</p>
+                <h1 id="sunrise"></h1>
+              </div>
+            </div>
+          </div>
+          <div class="sunset__data">
+            <div class="data__lable">
+              <div class="text">
+                <p>Sunset</p>
+                <h1 id="sunset"></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

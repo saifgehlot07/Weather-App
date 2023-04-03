@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+i {
+  color: #adb1b5;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Left Bar Styling Start */
+.leftbar {
+  position: relative;
+  background-color: #eef2f3;
+  width: 20%;
+  height: 110%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.leftbar .logo {
+  padding-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #adb1b5;
+  text-align: center;
+}
+
+.leftbar .logo span {
+  color: #2f69ff;
+  font-size: 1.7rem;
+}
+
+.leftbar ul li {
+  color: #adb1b5;
+  padding: 0.5rem 0;
+}
+
+.leftbar ul li:hover {
+  color: #2f69ff;
+  cursor: pointer;
+}
+
+.leftbar ul li i {
+  color: #adb1b5;
+  padding-right: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.leftbar ul li:hover i {
+  color: #2f69ff;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.leftbar ul li.active,
+.leftbar ul li i.active {
+  color: #2f69ff !important;
+}
+/* Left Bar Styling End */
+
+/* Weather Data Styling Start */
+.weatherdata {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  width: 55%;
+  height: 110%;
+  padding: 15px;
+}
+
+.weatherdata .top__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top__navbar .current__time p {
+  color: #adb1b5;
+}
+
+.weatherdata .top__navbar .search__data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search__data .search__input {
+  border-radius: 5px;
+  background-color: #eef2f3;
+  width: 100%;
+  padding: 0.2rem;
+}
+
+.search__data .search__input input {
+  border: none;
+  align-items: center;
+  padding: 0.3rem;
+  outline: none;
+  background: transparent;
+}
+
+.search__data .search__input i {
+  padding-left: 0.5rem;
+}
+
+.search__data .bell__icon i {
+  color: #adb1b5;
+  padding: 0.5rem 0.7rem;
+  width: 2.5rem;
+  height: 2.7rem;
+  margin-left: 1rem;
+  border-radius: 5px;
+  background-color: #eef2f3;
+}
+
+.search__data .user__icon {
+  color: #adb1b5;
+  padding: 0.5rem 0.7rem;
+  width: 2.5rem;
+  height: 2.4rem;
+  margin-left: 0.5rem;
+  border-radius: 5px;
+  background-color: #eef2f3;
+}
+
+.mid__overview .top__title h2 {
+  font-size: 1rem;
+}
+
+.mid__overview .data__lables {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem 0;
+}
+
+.mid__overview .data__lables .data__lable {
+  padding: 0.7rem 1rem;
+  background-color: #eef2f3;
+  width: 50%;
+  margin: 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 1rem;
+}
+
+.bottom__graph h2 {
+  font-size: 1rem;
+}
+
+/* Weather Data Styling End */
+
+/* locationdata Styling Start */
+
+.locationdata {
+  position: relative;
+  width: 25%;
+  height: 110%;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  color: #fff;
+}
+
+.locationdata .location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.locationdata .celcius__data {
+  border-bottom: 1px solid #fff;
+}
+
+.locationdata .location .country__name {
+  display: block;
+}
+
+.locationdata .location .country__name h1 {
+  font-size: 1.2rem;
+}
+
+.locationdata .location .time {
+  display: flex;
+}
+
+.locationdata .location .time h2 {
+  display: flex;
+  font-size: 1rem;
+}
+
+.locationdata .celcius__data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.locationdata .celcius__data .celcius h1 {
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+.locationdata .celcius__data .weather__type h2 {
+  font-size: 1.3rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+.locationdata .rain__progress .progress__data {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.locationdata .rain__progress .progress {
+  position: relative;
+  width: 70%;
+  height: 5vh;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #000;
+  margin: 0.5rem 0;
+  z-index: 1;
+}
+
+.locationdata .rain__progress .progress .progress__bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 1rem;
+  width: 30%;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.locationdata .sunset__data,
+.locationdata .sunrise__data {
+  padding: 0.7rem 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  align-items: center;
+  margin: 0.5rem 0;
+  border-radius: 1rem;
+}
+/* locationdata Styling End */
+
+/* Responsive */
