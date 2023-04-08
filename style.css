@@ -26,6 +26,11 @@ main {
   height: 100vh;
 }
 
+.main_app {
+  display: flex;
+  width: 80%;
+}
+
 /* Left Bar Styling Start */
 .leftbar {
   position: relative;
@@ -85,7 +90,7 @@ main {
   justify-content: space-between;
   flex-direction: column;
   position: relative;
-  width: 55%;
+  width: 70%;
   height: 110%;
   padding: 15px;
 }
@@ -158,12 +163,20 @@ main {
 }
 
 .mid__overview .data__lables .data__lable {
+  display: flex;
+  align-items: center;
   padding: 0.7rem 1rem;
   background-color: #eef2f3;
   width: 50%;
   margin: 0.5rem;
   font-size: 0.8rem;
   border-radius: 1rem;
+}
+
+.mid__overview .data__lables .data__lable i {
+  color: #0093e9;
+  font-size: 1.5rem;
+  margin-right: 1rem;
 }
 
 .bottom__graph h2 {
@@ -176,10 +189,10 @@ main {
 
 .locationdata {
   position: relative;
-  width: 25%;
+  width: 30%;
   height: 110%;
   background-color: #0093e9;
-  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  background-image: linear-gradient(to bottom right, #253b58, #183a7e);
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -190,7 +203,6 @@ main {
 .locationdata .location {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .locationdata .celcius__data {
@@ -265,15 +277,89 @@ h2 {
   z-index: 2;
 }
 
-.locationdata .sunset__data,
-.locationdata .sunrise__data {
+.locationdata .sunrise__data,
+.locationdata .sunset__data {
+  display: flex;
   padding: 0.7rem 1rem;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
   align-items: center;
   margin: 0.5rem 0;
   border-radius: 1rem;
 }
+
+.locationdata .sunrise__data .data__lable,
+.locationdata .sunset__data .data__lable {
+  display: flex;
+  align-items: center;
+}
+
+.locationdata .sunrise__data .data__lable i,
+.locationdata .sunset__data .data__lable i {
+  color: #0093e9;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
 /* locationdata Styling End */
 
 /* Responsive */
+@media screen and (max-width: 960px) {
+  html {
+    font-size: 0.8rem;
+  }
+
+  .leftbar,
+  .mid__overview,
+  .weatherdata {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  html {
+    font-size: 0.6rem;
+  }
+
+  .leftbar,
+  .weatherdata,
+  .locationdata {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .leftbar,
+  .weatherdata,
+  .locationdata {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  html {
+    font-size: 0.5rem;
+  }
+
+  .leftbar,
+  .weatherdata,
+  .locationdata {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .leftbar {
+    height: 100vh;
+  }
+
+  .weatherdata,
+  .locationdata {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .main_app {
+    display: block;
+  }
+}

@@ -17,7 +17,7 @@
     <main>
       <section class="leftbar">
         <div class="menu-bars__menu-logo">
-          <h1 class="logo"><span>W</span>eather<span>f</span>orcast</h1>
+          <h1 class="logo"><span>W</span>eather<span>P</span>ilot</h1>
           <ul>
             <li class="active">
               <i class="uil uil-estate active"></i> Dashboard
@@ -34,85 +34,91 @@
           </ul>
         </div>
       </section>
-      <section class="weatherdata">
-        <div class="top__navbar">
-          <div class="current__time">
-            <h1>Hi, SaifGehlot</h1>
-            <p>Thursday, Jan 4, 2023</p>
-          </div>
-          <div class="search__data">
-            <div class="search__input">
-              <i class="uil uil-search"></i>
-              <input
-                id="search"
-                type="text"
-                placeholder="Search Location Here"
-              />
+      <div class="main_app">
+        <section class="weatherdata">
+          <div class="top__navbar">
+            <div class="current__time">
+              <h1>Hi, SaifGehlot</h1>
+              <p>Thursday, Jan 4, 2023</p>
             </div>
-            <div class="bell__icon">
-              <i class="uil uil-bell"></i>
-            </div>
-            <div class="user__icon">
-              <i class="uil uil-user"></i>
-            </div>
-          </div>
-        </div>
-        <div class="mid__overview">
-          <div class="top__title">
-            <h2>Today Overview</h2>
-          </div>
-          <div class="data__lables">
-            <div class="data__lable">
-              <div class="text">
-                <p>Wind Speed</p>
-                <h1 id="wind-speed"></h1>
+            <div class="search__data">
+              <div class="search__input">
+                <i class="uil uil-search"></i>
+                <input
+                  id="search"
+                  type="text"
+                  placeholder="Search Location Here"
+                />
               </div>
-            </div>
-            <div class="data__lable">
-              <div class="text">
-                <p>Humidity</p>
-                <h1 id="humidity"></h1>
+              <div class="bell__icon">
+                <i class="uil uil-bell"></i>
+              </div>
+              <div class="user__icon">
+                <i class="uil uil-user"></i>
               </div>
             </div>
           </div>
-          <div class="data__lables">
-            <div class="data__lable">
-              <div class="text">
-                <p>Pressure</p>
-                <h1 id="pressure"></h1>
+          <div class="mid__overview">
+            <div class="top__title">
+              <h2>Today Overview</h2>
+            </div>
+            <div class="data__lables">
+              <div class="data__lable">
+                <i class="uil uil-wind"></i>
+                <div class="text">
+                  <p>Wind Speed</p>
+                  <h1 id="wind-speed"></h1>
+                </div>
+              </div>
+              <div class="data__lable">
+                <i class="uil uil-wind-sun"></i>
+                <div class="text">
+                  <p>Humidity</p>
+                  <h1 id="humidity"></h1>
+                </div>
               </div>
             </div>
-            <div class="data__lable">
-              <div class="text">
-                <p>Feels Like</p>
-                <h1 id="feels-like"></h1>
+            <div class="data__lables">
+              <div class="data__lable">
+                <i class="uil uil-water"></i>
+                <div class="text">
+                  <p>Pressure</p>
+                  <h1 id="pressure"></h1>
+                </div>
+              </div>
+              <div class="data__lable">
+                <i class="uil uil-sun"></i>
+                <div class="text">
+                  <p>Feels Like</p>
+                  <h1 id="feels-like"></h1>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="bottom__graph">
-          <h2>Average Weekly Temperature</h2>
-          <canvas id="weather__chart"></canvas>
-        </div>
-      </section>
-      <section class="locationdata">
-        <div class="location">
-          <div class="country__name">
-            <h1 id="city"></h1>
+          <div class="bottom__graph">
+            <h2>Average Daily Temperature</h2>
+            <canvas id="weather__chart"></canvas>
           </div>
-          <div class="time">
-            <h2 id="current-time">08:34 AM</h2>
+        </section>
+        <section class="locationdata">
+          <div class="location">
+            <div class="country__name">
+              <h1 id="city"></h1>
+              <p id="country"></p>
+            </div>
+            <div class="time">
+              <h2 id="current-time">08:34 AM</h2>
+            </div>
           </div>
-        </div>
-        <div class="celcius__data">
-          <div class="celcius">
-            <h1 id="celcius"></h1>
+          <div class="celcius__data">
+            <div class="celcius">
+              <h1 id="celcius"></h1>
+            </div>
+            <div class="weather__type">
+              <h2 id="weather-type"></h2>
+            </div>
           </div>
-          <div class="weather__type">
-            <h2 id="weather-type"></h2>
-          </div>
-        </div>
-        <div class="rain__progress">
+          <!-- <div class="rain__progress">
           <h2>Chance of Rain</h2>
           <div class="progress__data">
             <p>7pm</p>
@@ -142,29 +148,32 @@
             </div>
             <p>12%</p>
           </div>
-        </div>
-        <div class="sun__data">
-          <div class="top__title">
-            <h2>Sunset & Sunrise</h2>
-          </div>
-          <div class="sunrise__data">
-            <div class="data__lable">
-              <div class="text">
-                <p>Sunrise</p>
-                <h1 id="sunrise"></h1>
+        </div> -->
+          <div class="sun__data">
+            <div class="top__title">
+              <h2>Sunset & Sunrise</h2>
+            </div>
+            <div class="sunrise__data">
+              <div class="data__lable">
+                <i class="uil uil-sunset"></i>
+                <div class="text">
+                  <p>Sunrise</p>
+                  <h1 id="sunrise"></h1>
+                </div>
+              </div>
+            </div>
+            <div class="sunset__data">
+              <div class="data__lable">
+                <i class="uil uil-cloud-sun"></i>
+                <div class="text">
+                  <p>Sunset</p>
+                  <h1 id="sunset"></h1>
+                </div>
               </div>
             </div>
           </div>
-          <div class="sunset__data">
-            <div class="data__lable">
-              <div class="text">
-                <p>Sunset</p>
-                <h1 id="sunset"></h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
 
     <script src="./script.js"></script>
