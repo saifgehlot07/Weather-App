@@ -12,7 +12,7 @@ const feelsLike = document.getElementById("feels-like");
 const sunriseData = document.getElementById("sunrise");
 const sunsetData = document.getElementById("sunset");
 const searchWeather = document.getElementById("search");
-const cityTime = document.getElementById("current-time");
+const currentTiming = document.getElementById("currentDate");
 const API_KEY = "cdebb052c677cf0c147cc942b56bbd0d";
 
 let isoCountries = {
@@ -325,9 +325,6 @@ const fetchOneCallApi = (data) => {
   )
     .then((response) => response.json())
     .then((oneCallData) => {
-      cityTime.innerHTML = new Date(oneCallData.current.dt)
-        .toLocaleTimeString()
-        .substring(4, 2);
       const drawChart = () => {
         const chartDailyData = oneCallData.daily.map((d) => d.temp.day);
         myChart.data.datasets[0].data = chartDailyData;
@@ -365,3 +362,37 @@ window.addEventListener("load", () => {
     fetchFromApi(storageItem);
   }
 });
+
+const currentDateAndTime = () => {
+  // Current Date & Time
+  const currentDate = new Date();
+  const year = currentDate.getFullYear();
+  const getDate = currentDate.getDate();
+  const currentDay = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Friday",
+    "Saturday",
+  ][currentDate.getDay()];
+
+  const currentMonth = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ][currentDate.getMonth()];
+
+  currentTiming.innerHTML = `${currentDay}, ${currentMonth} ${getDate}, ${year}`;
+};
+
+currentDateAndTime();
